@@ -1,0 +1,11 @@
+C:\Users\nacho\Desktop\WebApiNetCore\bin\Debug\netcoreapp2.0\WebApiNetCore.deps.json
+C:\Users\nacho\Desktop\WebApiNetCore\bin\Debug\netcoreapp2.0\WebApiNetCore.runtimeconfig.json
+C:\Users\nacho\Desktop\WebApiNetCore\bin\Debug\netcoreapp2.0\WebApiNetCore.runtimeconfig.dev.json
+C:\Users\nacho\Desktop\WebApiNetCore\bin\Debug\netcoreapp2.0\WebApiNetCore.dll
+C:\Users\nacho\Desktop\WebApiNetCore\bin\Debug\netcoreapp2.0\WebApiNetCore.pdb
+C:\Users\nacho\Desktop\WebApiNetCore\obj\Debug\netcoreapp2.0\WebApiNetCore.csprojResolveAssemblyReference.cache
+C:\Users\nacho\Desktop\WebApiNetCore\obj\Debug\netcoreapp2.0\WebApiNetCore.csproj.CoreCompileInputs.cache
+C:\Users\nacho\Desktop\WebApiNetCore\obj\Debug\netcoreapp2.0\WebApiNetCore.AssemblyInfoInputs.cache
+C:\Users\nacho\Desktop\WebApiNetCore\obj\Debug\netcoreapp2.0\WebApiNetCore.AssemblyInfo.cs
+C:\Users\nacho\Desktop\WebApiNetCore\obj\Debug\netcoreapp2.0\WebApiNetCore.dll
+C:\Users\nacho\Desktop\WebApiNetCore\obj\Debug\netcoreapp2.0\WebApiNetCore.pdb
