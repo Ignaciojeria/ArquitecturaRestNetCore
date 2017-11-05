@@ -14,7 +14,14 @@ namespace WebApiNetCore.ServiceImpl
 
         public bool HttpPostFindUser(UserModel userModel)
         {
-           return userRepository.HttpPostFindUser( userModel);    
+            try {
+                userRepository.HttpPostFindUser(userModel);
+                return true;
+            }
+            catch {
+                return false;
+            }
+          
         }
     }
 }

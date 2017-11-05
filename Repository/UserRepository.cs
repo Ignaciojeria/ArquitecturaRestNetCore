@@ -24,14 +24,10 @@ namespace WebApiNetCore.Repository
             usuarios.Add(new User() {id=3,Username="invited",Password="invited"});
         }
 
-        public bool HttpPostFindUser(UserModel userModel) {
-            User user=usuarios.First(i => i.Username == userModel.username && i.Password==userModel.password);
-
-            if (user == null)
-                return false;
-
-            else
-                return true;
+        public User HttpPostFindUser(UserModel userModel) {
+ 
+                return usuarios.First(i => i.Username == userModel.username && i.Password == userModel.password);
+  
         }
 
         public static UserRepository getInstance() {
