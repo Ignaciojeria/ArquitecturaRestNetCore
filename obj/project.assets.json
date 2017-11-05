@@ -12529,7 +12529,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -12539,6 +12538,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Users\\nacho\\Desktop\\WebApiNetCore\\WebApiNetCore.csproj",
       "projectName": "WebApiNetCore",
@@ -12580,10 +12582,6 @@
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.All": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "2.0.0"
           }
