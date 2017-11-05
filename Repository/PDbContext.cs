@@ -13,6 +13,11 @@ namespace WebApiNetCore.Repository
         public static PersonaRepository GetPersonaRepositoryFromDbContext() {
             return PersonaRepository.getInstance();
         }
+
+        public static UserRepository GetuUserRepositoryFromDbContext() {
+            return UserRepository.getInstance();
+        }
+
         /* public EntityRepository EntityDbContext() {
             return EntityDbContext.getInstance();
         }*/

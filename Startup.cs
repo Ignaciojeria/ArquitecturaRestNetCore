@@ -48,6 +48,7 @@ namespace WebApiNetCore
              */
              //Estos Servicios Registrados en el inyector de dependencias se Inyectarán en los controladores!
             services.AddSingleton<IPersonaService, PersonaService>();
+            services.AddSingleton<IUserService,UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
