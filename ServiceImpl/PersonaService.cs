@@ -44,9 +44,9 @@ namespace WebApiNetCore.ServiceImpl
             personaRepository.HttpDelete(rut);
         }
 
-        public void HttpGet()
+        public List<Persona> HttpGet()
         {
-            personaRepository.HttpGet();
+          return  personaRepository.HttpGet();
         }
 
         public void HttpPost(Persona persona)

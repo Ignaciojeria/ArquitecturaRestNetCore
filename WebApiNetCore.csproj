@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="IService\" />
-    <Folder Include="ServiceImpl\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

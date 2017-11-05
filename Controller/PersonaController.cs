@@ -3,30 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebApiNetCore.IService;
+using WebApiNetCore.Entity;
 
 namespace WebApiNetCore.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class PersonaController : Controller
     {
+        private readonly IPersonaService personaService;
+
+        public PersonaController(IPersonaService personaService) {
+            this.personaService = personaService;
+        }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Persona> Get()
         {
-            return new string[] { "value1", "value2" };
+            return personaService.HttpGet();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return id+"";
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public Persona Post([FromBody]Persona persona)
         {
+            return persona;
         }
 
         // PUT api/values/5

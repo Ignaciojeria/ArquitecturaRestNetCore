@@ -37,8 +37,8 @@ namespace WebApiNetCore
              
             */
 
-            //   services.AddMvc();
-            services.AddMvcCore().AddJsonFormatters();
+               services.AddMvc();
+            //services.AddMvcCore().AddJsonFormatters();
             /* Agregamos nuestros repositorios que en producción deberían ser Scopes pero nosotros trabajaremos 
              * con Singletons para hacer pruebas de persistencia a una lista registrada en memoria. 
 
