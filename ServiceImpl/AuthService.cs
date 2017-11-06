@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -32,6 +33,7 @@ namespace WebApiNetCore.ServiceImpl
 
             var claims = new[]
                 {
+                    
                     new Claim(JwtRegisteredClaimNames.Sub, user.Username),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 }
@@ -42,6 +44,17 @@ namespace WebApiNetCore.ServiceImpl
             var token = new JwtSecurityToken(header, payload);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+
+        public string getClaimsFromToken(string token)
+        {
+             var parts = token.Split('.');
+            var decoded = Convert.FromBase64String(parts[1]);
+            string part = Encoding.UTF8.GetString(decoded);
+          //  var jwt = JObject.Parse(part);
+            return part;
+
         }
     }
 }

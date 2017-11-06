@@ -10,5 +10,6 @@ namespace WebApiNetCore.IService
     public interface IAuthService
     {
         string GenerateTokenForUser(User userModel);
+        string getClaimsFromToken(string token);
     }
 }

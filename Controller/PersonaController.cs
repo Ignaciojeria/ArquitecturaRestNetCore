@@ -20,7 +20,7 @@ namespace WebApiNetCore.Controllers
 
         // GET api/values
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public List<Persona> Get()
         {
             return personaService.HttpGet();
