@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebApiNetCore.IService;
 using WebApiNetCore.Entity;
 using WebApiNetCore.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApiNetCore.Controllers
 {
@@ -13,15 +14,22 @@ namespace WebApiNetCore.Controllers
     public class AuthController: Controller
     {
         private readonly IUserService userService;
+        readonly IAuthService authService;
 
-        public AuthController(IUserService userService) {
+        public AuthController(IUserService userService, IAuthService authService) {
             this.userService = userService;
+            this.authService = authService;
         }
 
+        [AllowAnonymous]
         [HttpPost]
-        public bool Post([FromBody]UserModel userModel)
+        public string Post([FromBody]UserModel userModel)
         {
-            return userService.HttpPostFindUser(userModel);
+
+            if (userService.HttpPostFindUser(userModel) == false)
+                return "El usuario no existe";
+            var token = authService.GenerateTokenForUser(userService.findUserbyUserModel(userModel));
+            return token;
         }
 
     }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebApiNetCore.IService;
 using WebApiNetCore.Entity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApiNetCore.Controllers
 {
@@ -19,6 +20,7 @@ namespace WebApiNetCore.Controllers
 
         // GET api/values
         [HttpGet]
+        [Authorize]
         public List<Persona> Get()
         {
             return personaService.HttpGet();

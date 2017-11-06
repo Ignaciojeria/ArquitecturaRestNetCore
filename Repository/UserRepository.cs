@@ -19,9 +19,9 @@ namespace WebApiNetCore.Repository
         }
 
         private void mock() {
-            usuarios.Add(new User() { id = 1, Username = "admin", Password = "admin" });
-            usuarios.Add(new User() {id=2,Username="user", Password="user" });
-            usuarios.Add(new User() {id=3,Username="invited",Password="invited"});
+            usuarios.Add(new User() { id = 1, Username = "admin", Password = "admin",Roles= new[] { "Admin", "User" } });
+            usuarios.Add(new User() { id = 2, Username = "user", Password = "user", Roles = new[] { "Invited", "User" } });
+            usuarios.Add(new User() {id=3,Username="invited",Password="invited", Roles = new[] { "Invited"} });
         }
 
         public User HttpPostFindUser(UserModel userModel) {

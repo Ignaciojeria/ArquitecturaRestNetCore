@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a7aa306d2e264d92ffef06296341a5e29b6e41eb"
+    "signature": "1c64844b005d0c2fb5b45e658e4dd487097167bd"
   },
   "compilationOptions": {
     "defines": [
@@ -23,7 +23,9 @@
     ".NETCoreApp,Version=v2.0": {
       "WebApiNetCore/1.0.0": {
         "dependencies": {
+          "JWT": "3.1.1",
           "Microsoft.AspNetCore.All": "2.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0"
         },
         "runtime": {
@@ -31,6 +33,19 @@
         },
         "compile": {
           "WebApiNetCore.dll": {}
+        }
+      },
+      "JWT/3.1.1": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "Newtonsoft.Json": "10.0.1",
+          "System.Security.Cryptography.Csp": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/JWT.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/JWT.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -3977,6 +3992,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "JWT/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-be77vY96lqvA0IO12fDJq6kMgjkSKPZ1NOa+e4jZHzKtUQcDkWEYiHVzqStju9/U+xo8QuzG4noFg8Q1KY52ww==",
+      "path": "jwt/3.1.1",
+      "hashPath": "jwt.3.1.1.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",

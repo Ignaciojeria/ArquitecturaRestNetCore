@@ -7,9 +7,8 @@ using WebApiNetCore.Model;
 
 namespace WebApiNetCore.IService
 {
-    public interface IUserService
+    public interface IAuthService
     {
-        bool HttpPostFindUser(UserModel userModel);
-        User findUserbyUserModel(UserModel userModel);
+        string GenerateTokenForUser(User userModel);
     }
 }

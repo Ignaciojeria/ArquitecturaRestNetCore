@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "JWT/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Security.Cryptography.Csp": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/JWT.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/JWT.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -4220,7 +4234,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Security.Cryptography.Csp.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
@@ -4750,6 +4764,19 @@
     }
   },
   "libraries": {
+    "JWT/3.1.1": {
+      "sha512": "be77vY96lqvA0IO12fDJq6kMgjkSKPZ1NOa+e4jZHzKtUQcDkWEYiHVzqStju9/U+xo8QuzG4noFg8Q1KY52ww==",
+      "type": "package",
+      "path": "jwt/3.1.1",
+      "files": [
+        "jwt.3.1.1.nupkg.sha512",
+        "jwt.nuspec",
+        "lib/net46/JWT.dll",
+        "lib/net46/JWT.xml",
+        "lib/netstandard1.3/JWT.dll",
+        "lib/netstandard1.3/JWT.xml"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -12528,7 +12555,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "JWT >= 3.1.1",
       "Microsoft.AspNetCore.All >= 2.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -12538,15 +12567,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\nacho\\Desktop\\WebApiNetCore\\WebApiNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\nacho\\Desktop\\Autenticacion\\ArquitecturaRestNetCore\\WebApiNetCore.csproj",
       "projectName": "WebApiNetCore",
-      "projectPath": "C:\\Users\\nacho\\Desktop\\WebApiNetCore\\WebApiNetCore.csproj",
+      "projectPath": "C:\\Users\\nacho\\Desktop\\Autenticacion\\ArquitecturaRestNetCore\\WebApiNetCore.csproj",
       "packagesPath": "C:\\Users\\nacho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nacho\\Desktop\\WebApiNetCore\\obj\\",
+      "outputPath": "C:\\Users\\nacho\\Desktop\\Autenticacion\\ArquitecturaRestNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12581,7 +12607,15 @@
             "version": "2.0.0",
             "autoReferenced": true
           },
+          "JWT": {
+            "target": "Package",
+            "version": "3.1.1"
+          },
           "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "2.0.0"
           }
